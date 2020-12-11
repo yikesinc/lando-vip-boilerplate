@@ -31,6 +31,7 @@ brew cask install lando
 
 ## What does it do?
 - Asks you to authenticate your ssh-key
+- Asks if the site is a multisite
 - Downloads WordPress
 - Downloads the VIP client's website files
 - Downloads the VIP Go mu-plugins
