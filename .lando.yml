@@ -1,0 +1,35 @@
+name: crowley-maritime
+recipe: wordpress
+config:
+  php: '7.4'
+  via: nginx
+  database: mysql:5.7
+  webroot: wordpress
+  # Set to true when debugging
+  xdebug: false
+services:
+  appserver:
+    build_as_root:
+      - curl -sL https://deb.nodesource.com/setup_current.x | bash -
+      - apt-get install -y nodejs
+  pma:
+    type: phpmyadmin:5.0
+    hosts: [database]
+  mailhog:
+    type: mailhog:v1.0.0
+    portforward: true
+    hogfrom: [appserver]
+  memcached:
+    type: memcached:1.5.11
+tooling:
+  wp-install:
+    service: appserver
+    description: Installs WordPress site
+    cmd: 
+      - .lando/wp-install
+  multisite-install:
+    service: appserver
+    description: Installs WordPress site
+    cmd: 
+      - pwd
+      - .lando/wp-multisite-install
