@@ -34,10 +34,10 @@ rsync -avh ./vip-go-mu-plugins-built/ wordpress/wp-content/mu-plugins
 rm -rf vip-go-mu-plugins-built
 
 echo "Cleaning Up"
-# rm -rf .git
-# rm .gitignore
-# rm Readme.md
-# rm -- "$0"
+rm -rf .git
+rm .gitignore
+rm Readme.md
+rm -- "$0"
 
 echo "All done!"
 echo https://"$LANDO_APP_NAME".lndo.site
