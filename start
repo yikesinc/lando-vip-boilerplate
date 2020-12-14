@@ -37,6 +37,7 @@ echo "Cleaning Up"
 rm -rf .git
 rm .gitignore
 rm Readme.md
+rm -rf .lando
 rm -- "$0"
 
 echo "All done!"
