@@ -1,4 +1,4 @@
-name: crowley-maritime
+name: site-name
 recipe: wordpress
 config:
   php: '7.4'
