@@ -34,8 +34,10 @@ brew cask install lando
 - Asks if the site is a multisite
 - Downloads WordPress
 - Downloads the VIP client's website files
-- Downloads the VIP Go mu-plugins
 - Starts the docker server
 - Sets up the `wp-config.php` file
 - Runs `wp core install` or `wp core multisite-install`
+- Downloads the VIP Go mu-plugins
 - Cleans up, leaving NO TRACE OF ITS EXISTENCE
+
+Whatever you put as the name property in the `.lando.yml` file will be both username and password
