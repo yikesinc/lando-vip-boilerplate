@@ -1,7 +1,7 @@
 name: site-name
 recipe: wordpress
 config:
-  php: '7.4'
+  php: "7.4"
   via: nginx
   database: mysql:5.7
   webroot: wordpress
@@ -25,11 +25,16 @@ tooling:
   wp-install:
     service: appserver
     description: Installs WordPress site
-    cmd: 
+    cmd:
       - .lando/wp-install
   multisite-install:
     service: appserver
     description: Installs WordPress site
-    cmd: 
+    cmd:
       - pwd
       - .lando/wp-multisite-install
+  backup:
+    service: appserver
+    description: Dumps database
+    dir: wordpress
+    cmd: wp db export

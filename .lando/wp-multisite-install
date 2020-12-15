@@ -16,9 +16,6 @@ if ( file_exists( __DIR__ . '/wp-content/vip-config/vip-config.php' ) ) {
 define( 'DISALLOW_FILE_EDIT', true );
 define( 'DISALLOW_FILE_MODS', true );
 define( 'AUTOMATIC_UPDATER_DISABLED', true );
-
-/* Multisite Configuration */
-define('WP_ALLOW_MULTISITE', true);
 PHP
 
 wp core multisite-install  --url="$LANDO_APP_NAME".lndo.site --title="$LANDO_APP_NAME" --admin_user="$LANDO_APP_NAME" --admin_password="$LANDO_APP_NAME" --admin_email=info@example.com --skip-email

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sed -i "s/site-name/$LANDO_APP_NAME/g" .idea/runConfigurations/site-name.xml
+sed -i "s/site-name-server/$LANDO_APP_NAME-server/g" .idea/runConfigurations/site-name.xml
+sed -i "s/site-name/$LANDO_APP_NAME/g" .idea/workspace.xml
+sed -i "s/site-name-server/$LANDO_APP_NAME-server/g" .idea/workspace.xml
+
+mv .idea/runConfigurations/site-name.xml .idea/runConfigurations/"$LANDO_APP_NAME".xml
